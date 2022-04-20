@@ -1,4 +1,9 @@
 <template>
+  <p>
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/help">Help</router-link>
+  </p>
+  <router-view></router-view>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>

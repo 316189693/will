@@ -28,13 +28,36 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
   </div>
+
+  <div id="counter">
+    Counter: {{counter}}
+  </div>
+
+  <div id="bind-attribute">
+    <span v-bind:title="message">
+    鼠标悬停几秒有惊喜！
+    </span>
+  </div>
+
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
+  },
+  data(){
+    return {
+      counter:1,
+      message: 'your loaded this page on '+ new Date().toLocaleString()
+
+    };
+  },
+  mounted() {
+    setInterval(()=>{
+      this.counter++
+    },1000)
   }
 }
 </script>
