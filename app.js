@@ -2,8 +2,8 @@ const express = require('express');
 let fs = require('fs');
 let https = require("https");
 let options = {
-    key: fs.readFileSync("./enc/privkey.pem"),
-    cert: fs.readFileSync("./enc/cacert.pem")
+    key: fs.readFileSync("../enc/privkey.pem"),
+    cert: fs.readFileSync("../enc/cacert.pem")
 };
 
 const app = express();
