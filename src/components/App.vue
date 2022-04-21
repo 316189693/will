@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./../assets/logo.png" style="height:100px;text-align: left; display: block; margin-bottom: 10px;margin-left: 100px;">
+  <img alt="Vue logo" src="./../assets/logo.svg" style="height:150px;text-align: left; display: block; margin-bottom: 10px;margin-left: 100px;">
   <div>
     <p>
       <router-link class="dd" to="/">Go to Home</router-link>
@@ -29,6 +29,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 </style>
