@@ -4,7 +4,7 @@ module.exports = defineConfig({
   chainWebpack: config => {
     config.plugin("html")
         .tap(args=>{
-          args[0].title = "will vue";
+          args[0].title = "code will";
           return args;
         })
   }
