@@ -1,8 +1,9 @@
 import axios from 'axios'
-console.log("axios")
+import cfg from '../config.json';
+
 let instance = axios.create({
-    baseURL: 'https://127.0.0.1:7000',
-    timeout: 10000,
+    baseURL: cfg.backend_base_url,
+    timeout: cfg.timeout,
     headers: {"Content-Type": "application/json; charset=UTF-8"}
 })
 export default instance;
