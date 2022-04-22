@@ -1,6 +1,6 @@
 <template>
   <div id="login-section">
-    <p>Log In</p>
+    <p>Sign Up</p>
     <div>
       <label for="account">Account</label>
       <input id="account" v-model="user.account" type="text"/>
@@ -10,11 +10,10 @@
       <input id="password" v-model="user.password" type="password"/>
     </div>
     <div>
-      <input type="button" value="Log In" v-on:click="login(user)"/>
+      <input type="button" value="Sign Up" v-on:click="signUp(user)"/>
     </div>
     <p>
       {{error}}
-      {{user.user_id}}
     </p>
   </div>
 </template>
@@ -26,30 +25,30 @@ import {useStore} from 'vuex'
 export default {
   created() {
 
-    this.$watch(() => this.$store.state.login.isAuthenticate, (n_d, o_d) => {
-      console.log("watch login.isAuthenticate "+'new data:' + n_d + ";old data:" + o_d);
+    this.$watch(() => this.$store.state.signup.isCreated, (n_d, o_d) => {
+      console.log("watch signup.isCreated "+'new data:' + n_d + ";old data:" + o_d);
       if (n_d) {
-        this.$router.push({path: "/"});
-        this.$store.commit("login/setAuthenticate", false);
+        this.$router.push({path: "/login"});
+        this.$store.commit("signup/setCreated", false);
       }
     }),
     {immediate: true}
   },
   setup() {
     const store = useStore();
-    const user = computed(() => store.state.login.user);
-    const error = computed(() => store.state.login.error);
-    const login = (user) => {
-      store.dispatch('login/login', user);
+    const user = computed(() => store.state.signup.user);
+    const error = computed(() => store.state.signup.error);
+    const signUp = (user) => {
+      store.dispatch('signup/signup', user);
     };
     return {
       user,
-      login,
+      signUp,
       error
     };
   },
 
-  name: "LoginPage",
+  name: "RegisterPage",
 
 }
 </script>

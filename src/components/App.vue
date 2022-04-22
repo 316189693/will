@@ -3,7 +3,8 @@
   <div>
     <p>
       <router-link class="dd" to="/">Go to Home</router-link>
-      <router-link class="dd" to="/login">sign in</router-link>
+      <router-link class="dd" to="/login">Log In</router-link>
+      <router-link class="dd" to="/user/signup">Sign Up</router-link>
     </p>
 
   </div>
