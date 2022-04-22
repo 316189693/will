@@ -19,7 +19,6 @@ const actions = {
     signup({commit, state}, params) {
 
         userService.signUp(params, function (res) {
-            console.log(res);
             if (res.status == 200) {
                 commit('setCreated', true)
 

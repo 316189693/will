@@ -18,7 +18,6 @@ const getters= {
 const actions = {
      login ({commit, state}, params) {
          loginService.login(params, function (res) {
-             console.log(res);
              if (res.status == 200) {
                  commit('setAuthenticate', true)
                  commit('userId', res.user_id)
