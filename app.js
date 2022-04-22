@@ -1,7 +1,8 @@
 const express = require('express');
 let fs = require('fs');
 let https = require("https");
-let cfg = require("../will-config/will-front/config.json");
+let env = process.env.NODE_ENV !== 'production' ? 'dev':'prod';
+let cfg = require("../will-config/will-front/"+env+"/config.json");
 let options = {
     key: fs.readFileSync(cfg.privkey_file),
     cert: fs.readFileSync(cfg.cacert_file)

@@ -1,5 +1,7 @@
 import axios from 'axios'
-import cfg from '../../will-config/will-front/config.json';
+let env = process.env.NODE_ENV !== 'production' ? 'dev':'prod';
+let cfg_path = "../../will-config/will-front/"+env+"/config.json";
+let cfg = require(cfg_path);
 
 let instance = axios.create({
     baseURL: cfg.backend_base_url,

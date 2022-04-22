@@ -1,5 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
-const { title } = require('../will-config/will-front/config.json');
+let env = process.env.NODE_ENV !== 'production' ? 'dev':'prod';
+let  { title } = require("../will-config/will-front/"+env+"/config.json");
 module.exports = defineConfig({
   transpileDependencies: true,
   chainWebpack: config => {
