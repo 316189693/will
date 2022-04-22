@@ -1,5 +1,5 @@
 import axios from 'axios'
-import cfg from '../config.json';
+import cfg from '../../will-config/will-front/config.json';
 
 let instance = axios.create({
     baseURL: cfg.backend_base_url,
