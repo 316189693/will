@@ -12,3 +12,5 @@ app.use(express.static("./dist"))
 
 let server = https.createServer(options, app);
 server.listen(cfg.port);
+
+console.log("port:"+cfg.port);
