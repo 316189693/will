@@ -5,6 +5,7 @@ const state = {
         account : "",
         password : "",
     },
+
     isAuthenticate: false,
     error:""
 }
@@ -20,7 +21,10 @@ const actions = {
          loginService.login(params, function (res) {
              if (res.status == 200) {
                  commit('setAuthenticate', true)
-                 commit('userId', res.user_id)
+                 console.log("ddd"+JSON.stringify(res))
+                 localStorage.setItem("htjy_token", res.data.token)
+                 localStorage.setItem("htjy_user_id", res.data.user_id)
+                 commit('userId', res.data.user_id)
 
              } else {
                  commit('setAuthenticate', false)
@@ -28,7 +32,18 @@ const actions = {
              }
          }, function (e) {
              commit('setAuthenticate', false);
-             commit('setError', "status_code:" + e.response.data.status + " detail:" + e.response.data.message);
+             let message = "";
+             if (e.response && e.response.data) {
+                 if (e.response.data.error) {
+                     message = "status_code:" + e.response.data.error.status + " detail:" + e.response.data.error.message;
+                 } else {
+                     message = "status_code:" + e.response.data.status + " detail:" + e.response.data.message;
+                 }
+
+             } else {
+                 message = e.message;
+             }
+             commit('setError', message);
          })
 
     }
@@ -56,6 +71,7 @@ const mutations = {
     setError(state, value) {
         state.error = value;
     }
+
 }
 
 export default {

@@ -10,6 +10,14 @@
       <input id="password" v-model="user.password" type="password"/>
     </div>
     <div>
+      <label for="first_name">First name</label>
+      <input id="first_name" v-model="user.first_name" type="input"/>
+    </div>
+    <div>
+      <label for="last_name">Last name</label>
+      <input id="last_name" v-model="user.last_name" type="input"/>
+    </div>
+    <div>
       <input type="button" value="Sign Up" v-on:click="signUp(user)"/>
     </div>
     <p>

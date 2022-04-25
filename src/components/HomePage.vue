@@ -1,5 +1,5 @@
 <template>
-  <p>Home</p>
+  <p>Home </p>
   <p>shift theme</p>
   <button v-on:click="darkTheme()">dark</button>
   <button v-on:click="greenTheme()">green</button>
@@ -8,44 +8,37 @@
 </template>
 
 <script>
+import {computed} from 'vue'
+import {useStore} from 'vuex'
+
 let theme = "light";
 const themes = {};
 
 themes[theme] = document.querySelector("#theme");
 export default {
-  data(){
+  data() {
     return {
-      isAuthenticated:false
+      isAuthenticated: false
     };
   },
-  computed: {
-    username() {
-      // We will see what `params` is shortly
-      return this.$route.params.username
-    },
-  },
+
+
+
   mounted() {
     this.shiftTheme(theme);
   },
   methods: {
-    goToDashboard() {
-      var isAuthenticated = false;
-      if (isAuthenticated) {
-        this.$router.push('/dashboard')
-      } else {
-        this.$router.push('/login')
-      }
+
+    async darkTheme() {
+      this.shiftTheme("dark");
     },
-    async darkTheme(){
-       this.shiftTheme("dark");
-    },
-    async lightTheme(){
+    async lightTheme() {
       this.shiftTheme("light");
     },
-    async greenTheme(){
+    async greenTheme() {
       this.shiftTheme("green");
     },
-    async redTheme(){
+    async redTheme() {
       this.shiftTheme("red");
     },
     async shiftTheme(newTheme) {

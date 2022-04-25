@@ -1,35 +1,30 @@
 import userService from "../../../api/user";
-
 const state = {
     user: {
-        account: "",
-        password: "",
-        first_name: "",
-        last_name: "",
+        user_id: "",
+        user_first_name : "",
+        user_last_name : "",
+        user_username : "",
     },
-    isCreated: false,
-    error: "",
+    error: ""
 }
 
-const getters = {
-    isCreated: (state) => {
-        return state.isCreated;
+const getters= {
+    getUser: (state) => {
+        return state.user;
     }
 }
 
 const actions = {
-    signup({commit, state}, params) {
-
-        userService.signUp(params, function (res) {
+    detail ({commit, state}, params) {
+        userService.detail(params, function (res) {
             if (res.status == 200) {
-                commit('setCreated', true)
+                commit('setUser', res.data.data)
 
             } else {
-                commit('setCreated', false)
                 commit('setError', res.message)
             }
         }, function (e) {
-            commit('setCreated', false);
             let message = "";
             if (e.response && e.response.data) {
                 if (e.response.data.error) {
@@ -39,32 +34,36 @@ const actions = {
                 }
 
             } else {
-                message = e.message;
+             message = e.message;
             }
             commit('setError', message);
         })
+
     }
 }
 
 const mutations = {
-    setCreated(state, value) {
-        state.isCreated = value;
+    setUser(state, value) {
+        state.user.user_first_name = value.user_first_name;
+        state.user.user_last_name = value.user_last_name;
+        state.user.user_username = value.user_username;
+        state.user.user_id = value.user_id;
+        state.error = "";
         if (value == false) {
-            state.user.account = "";
-            state.user.password = "";
-            state.user.first_name = "";
-            state.user.last_name = "";
+            state.user.user_first_name = "";
+            state.user.user_last_name = "";
+            state.user.user_username = "";
+            state.user.user_id = "";
             state.error = "";
-
         }
     },
     setError(state, value) {
-        state.error = value;
+        state.error = value
     }
 }
 
 export default {
-    namespaced: true,
+    namespaced:true,
     state,
     getters,
     actions,

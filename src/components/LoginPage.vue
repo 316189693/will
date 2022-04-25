@@ -29,7 +29,7 @@ export default {
     this.$watch(() => this.$store.state.login.isAuthenticate, (n_d, o_d) => {
       console.log("watch login.isAuthenticate "+'new data:' + n_d + ";old data:" + o_d);
       if (n_d) {
-        this.$router.push({path: "/"});
+        this.$router.push({path: "/dashboard"});
         this.$store.commit("login/setAuthenticate", false);
       }
     }),
