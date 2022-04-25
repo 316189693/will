@@ -11,6 +11,9 @@ module.exports = defineConfig({
           return args;
         })
   },
+    css:{
+        extract:false
+    },
    configureWebpack:  {
        entry: "./src/main.js",
            module: {
@@ -81,5 +84,6 @@ module.exports = defineConfig({
                },
            }),
        ]
+
    }
 })
