@@ -32,7 +32,7 @@ import {useStore} from 'vuex'
 
 export default {
   created() {
-
+    this.$store.commit("signup/setCreated", false);
     this.$watch(() => this.$store.state.signup.isCreated, (n_d, o_d) => {
       console.log("watch signup.isCreated "+'new data:' + n_d + ";old data:" + o_d);
       if (n_d) {

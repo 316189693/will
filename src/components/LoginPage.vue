@@ -25,7 +25,7 @@ import {useStore} from 'vuex'
 
 export default {
   created() {
-
+    this.$store.commit("login/setAuthenticate", false);
     this.$watch(() => this.$store.state.login.isAuthenticate, (n_d, o_d) => {
       console.log("watch login.isAuthenticate "+'new data:' + n_d + ";old data:" + o_d);
       if (n_d) {

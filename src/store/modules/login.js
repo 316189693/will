@@ -21,7 +21,6 @@ const actions = {
          loginService.login(params, function (res) {
              if (res.status == 200) {
                  commit('setAuthenticate', true)
-                 console.log("ddd"+JSON.stringify(res))
                  localStorage.setItem("htjy_token", res.data.token)
                  localStorage.setItem("htjy_user_id", res.data.user_id)
                  commit('userId', res.data.user_id)
