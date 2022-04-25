@@ -50,7 +50,6 @@ export default {
     },
     async shiftTheme(newTheme) {
       const themeElement = document.querySelector("#theme");
-      console.log(themeElement);
       if (themeElement) {
         themeElement.remove();
       }
