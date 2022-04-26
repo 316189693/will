@@ -1,20 +1,33 @@
 <template>
   <div id="login-section">
     <p>Log In</p>
-    <div>
-      <label for="account">Account</label>
-      <input id="account" v-model="user.account" type="text"/>
-    </div>
-    <div>
-      <label for="password">Password</label>
-      <input id="password" v-model="user.password" type="password"/>
-    </div>
-    <div>
-      <input type="button" value="Log In" v-on:click="login(user)"/>
-    </div>
-    <p>
-      {{error}}
-      {{user.user_id}}
+   <ui-form  type="1" item-margin-bottom="16" action-align="center">
+     <template #default="{actionClass }">
+          <ui-form-field :class="[actionClass,'required']">
+            <ui-textfield inputType="text" v-model="user.account">
+              UserName or Email
+              <template #before>
+                <ui-textfield-icon>account_box</ui-textfield-icon>
+              </template>
+            </ui-textfield>
+          </ui-form-field>
+          <ui-form-field :class="[actionClass, 'required']">
+            <ui-textfield inputType="password" v-model="user.password">
+              Password
+              <template #before>
+                <ui-textfield-icon>key</ui-textfield-icon>
+              </template>
+            </ui-textfield>
+          </ui-form-field>
+          <ui-form-field :class="actionClass">
+            <ui-button icon="login" raised @click="login(user)">Log In</ui-button>
+          </ui-form-field>
+
+     </template>
+   </ui-form>
+
+    <p >
+      <label style="color: red">{{error}}</label>
     </p>
   </div>
 </template>

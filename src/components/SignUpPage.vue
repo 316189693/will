@@ -1,30 +1,66 @@
 <template>
   <div id="login-section">
-    <p>Sign Up</p>
-    <div>
-      <label for="account">Account</label>
-      <input id="account" v-model="user.account" type="text"/>
-    </div>
-    <div>
-      <label for="password">Password</label>
-      <input id="password" v-model="user.password" type="password"/>
-    </div>
-    <div>
-      <label for="first_name">First name</label>
-      <input id="first_name" v-model="user.first_name" type="input"/>
-    </div>
-    <div>
-      <label for="last_name">Last name</label>
-      <input id="last_name" v-model="user.last_name" type="input"/>
-    </div>
-    <div>
-      <input type="button" value="Sign Up" v-on:click="signUp(user)"/>
-    </div>
-    <p>
+    <p >Sign Up</p>
+
+    <ui-form class="conditions-form" nowrap action-align="center" style="margin-left: 200px;">
+      <template #default="{ itemClass, actionClass }">
+        <ui-form-field>
+          <ui-grid >
+              <ui-grid-cell >
+                <ui-form-field :class="[itemClass, 'required']">
+                  <ui-textfield inputType="text" v-model="user.account">
+                    UserName
+                  </ui-textfield>
+                </ui-form-field>
+              </ui-grid-cell>
+              <ui-grid-cell >
+                <ui-form-field :class="itemClass">
+                  <ui-textfield inputType="password" v-model="user.password">
+                    Password
+                  </ui-textfield>
+                </ui-form-field>
+              </ui-grid-cell>
+          </ui-grid>
+        </ui-form-field>
+        <ui-form-field>
+          <ui-grid>
+            <ui-grid-cell >
+              <ui-form-field :class="itemClass">
+                <ui-textfield inputType="text" v-model="user.first_name">
+                  First Name
+                </ui-textfield>
+              </ui-form-field>
+            </ui-grid-cell>
+            <ui-grid-cell >
+              <ui-form-field :class="itemClass">
+                <ui-textfield inputType="text" v-model="user.last_name">
+                  Last Name
+                </ui-textfield>
+              </ui-form-field>
+            </ui-grid-cell>
+
+          </ui-grid>
+        </ui-form-field>
+        <ui-form-field>
+          <ui-grid>
+            <ui-grid-cell >
+              <ui-form-field :class="actionClass">
+                <ui-button raised @click="signUp(user)">Sign Up</ui-button>
+                <ui-button outlined @click="reset()">Reset</ui-button>
+              </ui-form-field>
+            </ui-grid-cell>
+          </ui-grid>
+
+        </ui-form-field>
+      </template>
+    </ui-form>
+    <p style="color:red">
       {{error}}
     </p>
+
   </div>
 </template>
+
 
 <script>
 import {computed} from 'vue'
@@ -49,10 +85,15 @@ export default {
     const signUp = (user) => {
       store.dispatch('signup/signup', user);
     };
+    const reset = ()=>{
+      store.commit("signup/reset", "")
+    }
+
     return {
       user,
       signUp,
-      error
+      error,
+      reset
     };
   },
 
@@ -61,6 +102,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped >
 
 </style>

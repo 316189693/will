@@ -6,7 +6,7 @@
   <p> user first name: {{ user.user_first_name }}</p>
   <p> user last name: {{ user.user_last_name }}
   </p>
-  <p>{{error}}</p>
+  <p style="color: red">{{error}}</p>
 </template>
 
 <script>

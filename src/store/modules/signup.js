@@ -60,6 +60,13 @@ const mutations = {
     },
     setError(state, value) {
         state.error = value;
+    },
+    reset(state, value){
+        state.user.account = "";
+        state.user.password = "";
+        state.user.first_name = "";
+        state.user.last_name = "";
+        state.error = "";
     }
 }
 
