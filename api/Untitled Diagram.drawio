@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-11T08:11:43.237Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="W6IUg9jH5YlQGDEl0D2H" version="24.4.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-05-11T08:14:13.976Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="gB8uuhyGOLCg6urDZ7J7" version="24.4.0" type="github" pages="5">
   <diagram name="Background-1 (Background)" id="YUrjdFluUgX0ZccNNnId">
     <mxGraphModel dx="3148" dy="1638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -8,7 +8,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Page-1" id="tZ6lz_Rf7Wv_dA77J3hF">
-    <mxGraphModel dx="2331" dy="1871" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="2" value="Background-1" parent="0" />
@@ -422,7 +422,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Page-1" id="aC-cllg4BpvJz3o4i6oP">
-    <mxGraphModel dx="2109" dy="655" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="2" value="Background-1" parent="0" />
@@ -819,6 +819,20 @@
             </mxGeometry>
           </mxCell>
         </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ifDVPl0-RJCGLs_x6eWH" name="Page-5">
+    <mxGraphModel dx="1259" dy="655" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="38YMHTDG6KTU4Ib2-uY_-1" value="展现层" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#ad2215;fillColor=#ad2215;fontColor=#f7f7f7;" vertex="1" parent="1">
+          <mxGeometry y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="38YMHTDG6KTU4Ib2-uY_-2" value="WEB UI" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#ad2215;fillColor=#ad2215;fontColor=#f7f7f7;" vertex="1" parent="1">
+          <mxGeometry x="130" y="40" width="400" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
