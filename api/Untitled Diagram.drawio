@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-11T09:19:00.082Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="tslxvdhmrqpHoZTciCBC" version="24.4.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-05-11T09:21:07.096Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="g3W_1gFtG34EaJaIbs3w" version="24.4.0" type="github" pages="5">
   <diagram name="Background-1 (Background)" id="YUrjdFluUgX0ZccNNnId">
     <mxGraphModel dx="3148" dy="1638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -826,7 +826,7 @@
     <mxGraphModel dx="3798" dy="4392" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
-        <mxCell id="1" value="Background" style="" parent="0" />
+        <mxCell id="1" value="Background" style="locked=1;" parent="0" />
         <mxCell id="38YMHTDG6KTU4Ib2-uY_-5" value="" style="whiteSpace=wrap;html=1;labelBackgroundColor=default;fillColor=#f0f0f0;strokeColor=#f0f0f0;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="-850" y="-2200" width="1580" height="1690" as="geometry" />
         </mxCell>
@@ -850,10 +850,13 @@
           <mxGeometry x="410" y="-2133" width="290" height="317" as="geometry" />
         </mxCell>
         <mxCell id="SGi-BpmoUlBqPRGnDw2N-7" value="Web UI" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#b94439;fontFamily=Verdana;flipH=1;fontStyle=1" vertex="1" parent="38YMHTDG6KTU4Ib2-uY_-3">
-          <mxGeometry x="-430" y="-2180" width="110" height="30" as="geometry" />
+          <mxGeometry x="-620" y="-2180" width="480" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SGi-BpmoUlBqPRGnDw2N-8" value="Mobile UI" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#b94439;fontFamily=Verdana;flipH=1;fontStyle=1" vertex="1" parent="38YMHTDG6KTU4Ib2-uY_-3">
-          <mxGeometry x="40" y="-2180" width="110" height="30" as="geometry" />
+          <mxGeometry x="-120" y="-2180" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SGi-BpmoUlBqPRGnDw2N-9" value="持续集成" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#b94439;fontFamily=Verdana;flipH=1;fontStyle=1" vertex="1" parent="38YMHTDG6KTU4Ib2-uY_-3">
+          <mxGeometry x="420" y="-2130" width="280" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
